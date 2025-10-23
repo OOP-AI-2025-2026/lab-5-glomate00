@@ -103,8 +103,3 @@ public class MainFrame extends JFrame implements ActionListener {
         JOptionPane.showMessageDialog(null, message);
     }
 }
-
-        // Вивести діалогове вікно з повідомленням
-        JOptionPane.showMessageDialog(null, message);
-    }
-}
