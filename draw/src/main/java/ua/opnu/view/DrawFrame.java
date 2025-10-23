@@ -65,4 +65,3 @@ public class DrawFrame extends JFrame {
         return buttonPanel;
     }
 }
-
