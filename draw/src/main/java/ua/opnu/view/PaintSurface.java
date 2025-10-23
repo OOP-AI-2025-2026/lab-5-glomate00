@@ -90,28 +90,7 @@ public class PaintSurface extends JComponent {
             g2.setPaint(colors.get(shapes.indexOf(s) % 6));
             g2.fill(s.getShape());
         });
-
-        if (startDrag != null && endDrag != null && !shapes.isEmpty()) {
-            g2.setPaint(Color.LIGHT_GRAY);
-            // Фігура вже знаходиться у списку shapes і оновлюється в mouseDragged
-            // Тому контур малювати тут не потрібно.
-        }
     }
-
-    private void paintBackgroundGrid(Graphics2D g2) {
-        g2.setPaint(Color.LIGHT_GRAY);
-
-        for (int i = 0; i < getSize().width; i += 10) {
-            Shape line = new Line2D.Float(i, 0, i, getSize().height);
-            g2.draw(line);
-        }
-
-        for (int i = 0; i < getSize().height; i += 10) {
-            Shape line = new Line2D.Float(0, i, getSize().width, i);
-            g2.draw(line);
-        }
-    }
-}
 
     private void paintBackgroundGrid(Graphics2D g2) {
         g2.setPaint(Color.LIGHT_GRAY);
